@@ -1,0 +1,3 @@
+# Ignore config.php, this is where environment variables can be configured
+/config.php
+/log.txt
