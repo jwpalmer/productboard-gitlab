@@ -1,3 +1,4 @@
+## Gitlab / Productboard Sync
 
 Welcome to my shitty code! This is meant to sync up Productboard and Gitlab until Productboard inevitably builds their own, much better native integration. By the time you finish reading through this, you'll have all fingers crossed that they integrate ASAP.
 
@@ -28,7 +29,7 @@ This isn't meant to be a long-term solution (though, I guess many things aren't 
 [2] see https://developer.productboard.com/#operation/postWebhook for instructions
 
 
-***GITLAB***
+***GITLAB***  
 1. Gitlab requires a personal access token for a few key actions (group tokens won't work according to the API docs since an "author" needs to be assigned), so the first step is to log in, and under your own account, head to preferences, then "access tokens", and create a new one with "API" permissions to read/write to the Gitlab API for your project. Add the generated secret to the Gitlab keys array, and enter the Gitlab API URL (latest tested with this code is v4) to config.php
 
 2. Generate a GUID to be passed to this application from Gitlab's webhooks in an X-GITLAB-TOKEN header, and pop that into config.php
@@ -36,7 +37,7 @@ This isn't meant to be a long-term solution (though, I guess many things aren't 
 3. In the Gitlab GUI, register a webhook with this project's URL, appended by /gitlab (e.g., https://api.example.com/my/project/path/gitlab) at {Group Name} > Settings > Webhooks, with Issue, Note, and Release events, over SSL
 
 
-**Bringing it all together**
+**Bringing it all together**  
 Once you've completed both steps above, you'll need to set the status mappings between Gitlab and Productboard, so that this code can translate between the two.
 
 For Gitlab, the labels field is used, but in conjunction with state (opened/closed). For Productboard, you'll need to use the API to get the API IDs of the statuses you want, and then assign one to open, another to closed, and then map the rest you'd like to use one-to-one between Productboard and Gitlab.
