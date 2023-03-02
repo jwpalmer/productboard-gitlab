@@ -11,7 +11,7 @@ Welcome to my shitty code! This is meant to sync up Productboard and Gitlab unti
 - When the "push to Gitlab" dropdown's value is changed to "not set" and the "gitlab URL" field has a valid issue URL, deletes the corresponding linked feature from Gitlab
 
 
-**Requirements/Setup:**
+**Requirements/Setup:**  
 This isn't meant to be a long-term solution (though, I guess many things aren't and look what happens...), so this code is mostly written to be easily maintained, not replicated for other projects/companies/setups. Commenting the hell out of it just in case.
 
 
