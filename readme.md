@@ -14,7 +14,7 @@ Welcome to my shitty code! This is meant to sync up Productboard and Gitlab unti
 ### Requirements/Setup
 This isn't meant to be a long-term solution (though, I guess many things aren't and look what happens...), so this code is mostly written to be easily maintained, not replicated for other projects/companies/setups. Commenting the hell out of it just in case.
 
-#### Host Some PHP Code Somewhere
+#### Host This Code Somewhere
 Because this is just a quick script, there's no dependencies, frameworks, or databases. Just drop this code on a server that runs PHP and point a public URL to the folder. The API keys for respective services are stored in config.php, make sure this isn't accessible to the web and you're all set.
 
 #### Productboard
