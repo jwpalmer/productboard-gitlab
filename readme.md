@@ -21,7 +21,7 @@ Because this is just a quick script, there's no dependencies, frameworks, or dat
 1. In the "integrations" section, under "Public API," create a new access token, and store it in config.php
 
 2. Create two new custom fields in Productboard:
-- "Push to Gitlab" - set as dropdown, and for the values, add your Gitlab project names with IDs in parentheses in the value (e.g., "My cool project (54637)")- these IDs are string matched
+- "Push to Gitlab" - set as dropdown, and for the values, add your Gitlab project names with IDs in parentheses in the value (e.g., "My cool project (54637)")- these IDs are annoyingly string matched
 - "Gitlab URL" - a text field, this is where the URL to the corresponding issue / product backlog item in Gitlab will go once a successful sync is established (and is how you know it worked)
 
 3. Use the Productboard API to retrieve the IDs[1] of the two custom fields, and put them in their corresponding config variables in config.php
